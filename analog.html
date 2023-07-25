@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meteran Analog Air</title>
+    <link rel="stylesheet" type="text/css" href="analog.css" />
+  </head>
+  <body>
+    <div class="meter">
+      <div class="dial"></div>
+      <div class="needle" id="needle"></div>
+    </div>
+
+    <script>
+      // Fungsi untuk mengubah sudut jarum berdasarkan nilai meteran
+      function setNeedleAngle(angle) {
+        const needle = document.getElementById("needle");
+        needle.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+      }
+
+      // Contoh: untuk menampilkan angka 90, panggil setNeedleAngle(90);
+      // Anda dapat mengatur nilai ini sesuai kebutuhan, misalnya dari data yang didapatkan dari backend.
+      setNeedleAngle(90);
+    </script>
+  </body>
+</html>
